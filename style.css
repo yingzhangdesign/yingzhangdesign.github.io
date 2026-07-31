@@ -1,0 +1,102 @@
+/* 基础设置 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family:
+    Helvetica,
+    Arial,
+    "PingFang SC",
+    sans-serif;
+
+}
+
+
+/* 页面容器 */
+
+.container {
+
+    height: 100vh;
+
+    padding: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+/* 名字 */
+
+h1 {
+
+    font-size: 64px;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+}
+
+
+/* 介绍文字 */
+
+.intro {
+
+    width: 520px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 26px;
+
+    line-height: 1.5;
+
+    font-weight: 300;
+
+}
+
+
+/* 导航 */
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+}
+
+
+nav a {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+}
+
+
+nav a:hover {
+
+    opacity: 0.5;
+
+}
