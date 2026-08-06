@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 
+
 /* =====================
    BASIC
 ===================== */
@@ -101,8 +102,6 @@ a {
 
 
 }
-
-
 
 
 
@@ -279,18 +278,25 @@ h1 span {
 
 
 
+
 /* =====================
    HOME BOTTOM NAV
 ===================== */
 
 
-.container nav {
+.hero-nav {
+
+
+    width:100%;
 
 
     display:flex;
 
 
     justify-content:center;
+
+
+    align-items:center;
 
 
     gap:40px;
@@ -305,7 +311,7 @@ h1 span {
 
 
 
-.container nav a {
+.hero-nav a {
 
 
     font-size:18px;
@@ -317,13 +323,20 @@ h1 span {
 
 
 
-.container nav a:hover {
+.hero-nav.hide {
 
 
-    opacity:0.5;
+    opacity:0;
+
+
+    transform:translateY(30px);
+
+
+    pointer-events:none;
 
 
 }
+
 
 
 
