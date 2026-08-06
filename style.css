@@ -184,3 +184,118 @@ nav a:hover {
     color:#555;
 
 }
+
+
+/* ===================== SELECTED WORKS ===================== */
+
+.works {
+
+    padding: 120px 36px;
+
+}
+
+
+.works h2 {
+
+    font-size:32px;
+
+    font-weight:400;
+
+    margin-bottom:60px;
+
+}
+
+
+
+.grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+}
+
+
+
+.project {
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.project img {
+
+    width:100%;
+
+    height:400px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+
+.overlay {
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.55);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:0.3s;
+
+}
+
+
+
+.project:hover .overlay {
+
+    opacity:1;
+
+}
+
+
+
+.overlay h3 {
+
+    font-size:24px;
+
+    font-weight:400;
+
+}
+
+
+
+.overlay p {
+
+    font-size:14px;
+
+}
+
