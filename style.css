@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 
+/* =====================
+   BASIC
+===================== */
+
+
 *{
 
 margin:0;
@@ -12,9 +17,14 @@ box-sizing:border-box;
 }
 
 
+
 body{
 
-font-family:Inter,Arial,sans-serif;
+font-family:
+Inter,
+Helvetica,
+Arial,
+sans-serif;
 
 color:#111;
 
@@ -34,10 +44,8 @@ color:#111;
 
 
 
-
-
 /* =====================
-FIXED HEADER
+   FIXED HEADER
 ===================== */
 
 
@@ -60,21 +68,26 @@ display:grid;
 
 grid-template-columns:1fr auto 1fr;
 
+
 align-items:center;
 
 
 z-index:100;
 
 
-background:white;
+background:rgba(255,255,255,0.92);
+
+backdrop-filter:blur(10px);
+
 
 
 opacity:0;
 
+
 transform:translateY(-20px);
 
 
-transition:.4s;
+transition:.45s ease;
 
 
 }
@@ -86,6 +99,7 @@ transition:.4s;
 
 opacity:1;
 
+
 transform:translateY(0);
 
 
@@ -93,22 +107,30 @@ transform:translateY(0);
 
 
 
+
+
 .header-left{
+
 
 display:flex;
 
 gap:35px;
 
+
 }
 
 
+
+
 .header-right{
+
 
 display:flex;
 
 justify-content:flex-end;
 
 gap:30px;
+
 
 }
 
@@ -125,15 +147,26 @@ font-size:16px;
 
 
 
+
 .header-center{
 
 
 font-size:24px;
 
+font-weight:400;
+
+
 }
 
 
-/* ===================== HOME ===================== */
+
+
+
+
+
+/* =====================
+   HOME FIRST SCREEN
+===================== */
 
 
 .home{
@@ -141,12 +174,15 @@ font-size:24px;
 
 height:100vh;
 
+
 padding:30px 36px;
+
 
 
 display:flex;
 
 flex-direction:column;
+
 
 justify-content:space-between;
 
@@ -155,12 +191,17 @@ justify-content:space-between;
 
 
 
+
 .home-title{
 
 
 font-size:42px;
 
+
 font-weight:400;
+
+
+letter-spacing:-0.5px;
 
 
 }
@@ -172,7 +213,10 @@ font-weight:400;
 
 font-weight:300;
 
+
 }
+
+
 
 
 
@@ -182,14 +226,19 @@ font-weight:300;
 
 width:520px;
 
+
 margin:auto;
+
 
 text-align:center;
 
 
+
 font-size:26px;
 
+
 line-height:1.5;
+
 
 font-weight:300;
 
@@ -201,20 +250,29 @@ font-weight:300;
 
 
 
+
+/* 首页底部导航 */
+
+
 .hero-nav{
 
 
 display:flex;
 
+
 justify-content:center;
+
 
 gap:40px;
 
 
-transition:.4s;
+
+transition:.45s ease;
 
 
 }
+
+
 
 
 .hero-nav a{
@@ -227,12 +285,16 @@ font-size:18px;
 
 
 
+
+
 .hero-nav.hidden{
 
 
 opacity:0;
 
-transform:translateY(10px);
+
+transform:translateY(15px);
+
 
 }
 
@@ -241,17 +303,21 @@ transform:translateY(10px);
 
 
 
-/* ===================== WORKS ===================== */
 
+/* =====================
+   WORKS SECTION
+===================== */
 
 
 .works{
 
 
-padding:140px 36px 180px;
+padding:90px 8% 160px;
 
 
 }
+
+
 
 
 
@@ -260,13 +326,22 @@ padding:140px 36px 180px;
 
 display:grid;
 
+
 grid-template-columns:repeat(3,1fr);
 
-gap:40px;
+
+gap:32px;
 
 
 }
 
+
+
+
+
+
+
+/* 单个作品 */
 
 
 .project{
@@ -274,11 +349,22 @@ gap:40px;
 
 position:relative;
 
+
 overflow:hidden;
+
+
+cursor:pointer;
 
 
 }
 
+
+
+
+
+
+
+/* 图片 */
 
 
 .project img{
@@ -286,17 +372,44 @@ overflow:hidden;
 
 width:100%;
 
+
 aspect-ratio:4 / 3;
+
 
 object-fit:cover;
 
+
 display:block;
 
-transition:0.5s ease;
+
+transition:
+transform .6s ease;
 
 
 }
 
+
+
+
+
+/* hover 放大 */
+
+
+.project:hover img{
+
+
+transform:scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+/* 图片上的文字层 */
 
 
 .overlay{
@@ -304,31 +417,41 @@ transition:0.5s ease;
 
 position:absolute;
 
+
 inset:0;
 
 
-background:rgba(0,0,0,0.45);
+
+background:
+rgba(0,0,0,0.45);
+
 
 
 color:white;
 
 
+
 display:flex;
+
 
 flex-direction:column;
 
+
 justify-content:center;
 
+
 align-items:center;
+
 
 
 opacity:0;
 
 
-transition:0.5s ease;
+transition:.45s ease;
 
 
 }
+
 
 
 
@@ -341,36 +464,88 @@ opacity:1;
 }
 
 
-.project:hover img{
 
-
-transform:scale(1.04);
-
-
-}
 
 
 
 .overlay h3{
 
 
-font-size:28px;
+font-size:26px;
+
 
 font-weight:400;
 
-letter-spacing:0.5px;
+
+letter-spacing:.5px;
 
 
 }
 
 
 
+
+
 .overlay p{
 
 
-margin-top:10px;
+margin-top:14px;
 
-font-size:14px;
+
+font-size:15px;
+
+
+opacity:.85;
+
+
+}
+
+
+
+
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+
+@media(max-width:900px){
+
+
+.grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+.intro{
+
+
+width:auto;
+
+
+font-size:22px;
+
+
+}
+
+
+
+.fixed-header{
+
+
+grid-template-columns:1fr;
+
+
+gap:15px;
+
+
+}
+
 
 
 }
