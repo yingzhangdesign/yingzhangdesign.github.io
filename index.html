@@ -80,6 +80,7 @@
 
 
 
+
 <!-- First Screen -->
 
 
@@ -104,7 +105,11 @@
 
 
 
-    <nav>
+
+
+    <!-- Homepage Navigation -->
+
+    <nav class="hero-nav">
 
 
         <a href="#works">
@@ -125,7 +130,9 @@
     </nav>
 
 
+
 </div>
+
 
 
 
@@ -251,29 +258,44 @@ Industrial Design Project
 
 
 
+
 <script>
 
 
-window.addEventListener("scroll",function(){
+window.addEventListener("scroll", function(){
 
 
 
-const header=document.querySelector(".fixed-header");
+const header = document.querySelector(".fixed-header");
+
+
+const heroNav = document.querySelector(".hero-nav");
+
 
 
 
 if(window.scrollY > window.innerHeight * 0.6){
 
 
-header.classList.add("show");
+
+    header.classList.add("show");
+
+
+    heroNav.classList.add("hide");
+
 
 
 }
 
-else{
+else {
 
 
-header.classList.remove("show");
+
+    header.classList.remove("show");
+
+
+    heroNav.classList.remove("hide");
+
 
 
 }
@@ -285,6 +307,8 @@ header.classList.remove("show");
 
 
 </script>
+
+
 
 
 
