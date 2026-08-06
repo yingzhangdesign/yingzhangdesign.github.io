@@ -18,63 +18,40 @@
 
 
 
-<!-- FIXED HEADER -->
+<!-- 滚动后出现的固定导航 -->
 
 <header class="fixed-header">
 
 
-    <div class="header-left">
+<div class="header-left">
 
+<a href="#works">Work</a>
 
-        <a href="#works">
-            Work
-        </a>
+<a href="#">About</a>
 
+<a href="#">Contact</a>
 
-        <a href="#">
-            About
-        </a>
-
-
-        <a href="#">
-            Contact
-        </a>
-
-
-    </div>
+</div>
 
 
 
+<div class="header-center">
 
-    <div class="header-center">
+YING ZHANG ｜ 张颖
 
-        YING ZHANG ｜ 张颖
-
-    </div>
-
+</div>
 
 
 
-    <div class="header-right">
+<div class="header-right">
 
+<a href="#">Behance</a>
 
-        <a href="#">
-            Behance
-        </a>
+<a href="#">LinkedIn</a>
 
+<a href="#">Email</a>
 
-        <a href="#">
-            LinkedIn
-        </a>
-
-
-        <a href="#">
-            Email
-        </a>
-
-
-    </div>
-
+</div>
 
 
 </header>
@@ -85,56 +62,52 @@
 
 
 
-<!-- HOME FIRST SCREEN -->
+<!-- 第一屏 -->
 
 
-<section class="container">
+<section class="home">
 
 
-    <h1>
+<div class="home-title">
 
-        YING ZHANG <span>｜ 张颖</span>
+YING ZHANG <span>｜ 张颖</span>
 
-    </h1>
-
-
-
-
-    <p class="intro">
-
-
-        Industrial Designer exploring products,
-        objects and experiences through
-        research, form and technology.
-
-
-    </p>
+</div>
 
 
 
-
-    <div class="hero-nav">
-
-
-        <a href="#works">
-            WORK
-        </a>
+<div class="intro">
 
 
+Industrial Designer exploring products,
+objects and experiences through
+research, form and technology.
 
-        <a href="#">
-            ABOUT
-        </a>
+
+</div>
 
 
 
-        <a href="#">
-            CONTACT
-        </a>
+
+<div class="hero-nav">
 
 
+<a href="#works">
+WORK
+</a>
 
-    </div>
+
+<a href="#">
+ABOUT
+</a>
+
+
+<a href="#">
+CONTACT
+</a>
+
+
+</div>
 
 
 
@@ -148,16 +121,13 @@
 
 
 
-<!-- WORKS -->
+<!-- 作品区域 -->
 
 
 <section class="works" id="works">
 
 
-
 <div class="grid">
-
-
 
 
 
@@ -167,34 +137,20 @@
 <img src="images/project01.jpg">
 
 
-
 <div class="overlay">
 
 
-<h3>
-
-Pneuvo
-
-</h3>
-
-
+<h3>Pneuvo</h3>
 
 <p>
-
 Home Respiratory Detection Device
-
 </p>
 
 
-
 </div>
 
 
-
 </div>
-
-
-
 
 
 
@@ -207,34 +163,20 @@ Home Respiratory Detection Device
 <img src="images/project02.jpg">
 
 
-
 <div class="overlay">
 
 
-<h3>
-
-Topolert
-
-</h3>
-
-
+<h3>Topolert</h3>
 
 <p>
-
 Slope Risk Monitoring System
-
 </p>
 
 
-
 </div>
 
 
-
 </div>
-
-
-
 
 
 
@@ -247,40 +189,24 @@ Slope Risk Monitoring System
 <img src="images/project03.jpg">
 
 
-
 <div class="overlay">
 
 
-<h3>
-
-Project 03
-
-</h3>
-
-
+<h3>Project 03</h3>
 
 <p>
-
 Industrial Design Project
-
 </p>
 
 
+</div>
+
 
 </div>
 
 
 
 </div>
-
-
-
-
-
-
-
-</div>
-
 
 
 </section>
@@ -292,42 +218,34 @@ Industrial Design Project
 
 
 
-
 <script>
 
 
-window.addEventListener("scroll",function(){
+window.addEventListener("scroll",()=>{
+
+
+let header=document.querySelector(".fixed-header");
+
+let hero=document.querySelector(".hero-nav");
 
 
 
-const header = document.querySelector(".fixed-header");
-
-const heroNav = document.querySelector(".hero-nav");
+if(window.scrollY > 100){
 
 
+header.classList.add("active");
 
-if(window.scrollY > window.innerHeight * 0.6){
-
-
-
-    header.classList.add("show");
-
-    heroNav.classList.add("hide");
-
+hero.classList.add("hidden");
 
 
 }
 
-
-
 else{
 
 
+header.classList.remove("active");
 
-    header.classList.remove("show");
-
-    heroNav.classList.remove("hide");
-
+hero.classList.remove("hidden");
 
 
 }
@@ -339,8 +257,6 @@ else{
 
 
 </script>
-
-
 
 
 
