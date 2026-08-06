@@ -18,7 +18,7 @@
 
 
 
-<!-- Fixed Header -->
+<!-- FIXED HEADER -->
 
 <header class="fixed-header">
 
@@ -45,11 +45,13 @@
 
 
 
+
     <div class="header-center">
 
         YING ZHANG ｜ 张颖
 
     </div>
+
 
 
 
@@ -74,6 +76,7 @@
     </div>
 
 
+
 </header>
 
 
@@ -81,10 +84,11 @@
 
 
 
-<!-- First Screen -->
+
+<!-- HOME FIRST SCREEN -->
 
 
-<div class="container">
+<section class="container">
 
 
     <h1>
@@ -95,21 +99,21 @@
 
 
 
+
     <p class="intro">
+
 
         Industrial Designer exploring products,
         objects and experiences through
         research, form and technology.
+
 
     </p>
 
 
 
 
-
-    <!-- Homepage Navigation -->
-
-    <nav class="hero-nav">
+    <div class="hero-nav">
 
 
         <a href="#works">
@@ -117,9 +121,11 @@
         </a>
 
 
+
         <a href="#">
             ABOUT
         </a>
+
 
 
         <a href="#">
@@ -127,11 +133,12 @@
         </a>
 
 
-    </nav>
+
+    </div>
 
 
 
-</div>
+</section>
 
 
 
@@ -140,12 +147,11 @@
 
 
 
-<!-- Works -->
+
+<!-- WORKS -->
 
 
 <section class="works" id="works">
-
-
 
 
 
@@ -166,19 +172,28 @@
 
 
 <h3>
+
 Pneuvo
+
 </h3>
 
 
+
 <p>
+
 Home Respiratory Detection Device
+
 </p>
 
 
+
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -197,19 +212,28 @@ Home Respiratory Detection Device
 
 
 <h3>
+
 Topolert
+
 </h3>
 
 
+
 <p>
+
 Slope Risk Monitoring System
+
 </p>
 
 
+
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -228,19 +252,28 @@ Slope Risk Monitoring System
 
 
 <h3>
+
 Project 03
+
 </h3>
 
 
+
 <p>
+
 Industrial Design Project
+
 </p>
 
 
+
 </div>
 
 
+
 </div>
+
+
 
 
 
@@ -259,18 +292,17 @@ Industrial Design Project
 
 
 
+
 <script>
 
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll",function(){
 
 
 
 const header = document.querySelector(".fixed-header");
 
-
 const heroNav = document.querySelector(".hero-nav");
-
 
 
 
@@ -280,19 +312,19 @@ if(window.scrollY > window.innerHeight * 0.6){
 
     header.classList.add("show");
 
-
     heroNav.classList.add("hide");
 
 
 
 }
 
-else {
+
+
+else{
 
 
 
     header.classList.remove("show");
-
 
     heroNav.classList.remove("hide");
 
@@ -313,6 +345,5 @@ else {
 
 
 </body>
-
 
 </html>
