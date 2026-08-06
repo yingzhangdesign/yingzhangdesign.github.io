@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
-/* 基础设置 */
+
+/* =====================
+   BASIC
+===================== */
+
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
 }
+
 
 
 body {
@@ -23,197 +32,441 @@ body {
 
 }
 
-h1 span {
-
-    font-weight:300;
-
-}
-
-/* 页面容器 */
-
-.container {
-
-    height: 100vh;
-
-    padding: 28px 36px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-}
-
-/* 名字 */
-
-h1 {
-    font-size: 42px;
-    font-weight: 400;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-}
 
 
-/* 介绍文字 */
+a {
 
-.intro {
+    color:#111;
 
-    width: 520px;
-
-    margin: auto;
-
-    text-align: center;
-
-    font-size: 26px;
-
-    line-height: 1.5;
-
-    font-weight: 300;
+    text-decoration:none;
 
 }
 
 
-/* 导航 */
 
-nav {
 
-    display: flex;
 
-    justify-content: center;
+/* =====================
+   FIXED HEADER
+===================== */
 
-    gap: 40px;
+
+.fixed-header {
+
+
+    position:fixed;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    padding:30px 36px;
+
+
+    display:grid;
+
+
+    grid-template-columns:1fr auto 1fr;
+
+
+    align-items:center;
+
+
+    background:white;
+
+
+    z-index:1000;
+
+
+
+    opacity:0;
+
+
+    transform:translateY(-20px);
+
+
+    transition:0.4s ease;
+
+
 
 }
 
 
-nav a {
 
-    color: #111;
 
-    text-decoration: none;
+.fixed-header.show {
 
-    font-size: 18px;
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
 
 }
 
 
-nav a:hover {
 
-    opacity: 0.5;
+
+
+.header-left {
+
+
+    display:flex;
+
+
+    gap:35px;
+
 
 }
 
-/* ===================== SELECTED WORKS ===================== */
 
-.works {
 
-    padding: 160px 36px;
+
+.header-left a,
+.header-right a {
+
+
+    font-size:16px;
+
 
 }
 
 
-.works h2 {
 
-    font-size:32px;
+.header-center {
+
+
+    font-size:24px;
+
 
     font-weight:400;
 
-    margin-bottom:60px;
 
 }
+
+
+
+
+.header-right {
+
+
+    display:flex;
+
+
+    justify-content:flex-end;
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+/* =====================
+   FIRST SCREEN
+===================== */
+
+
+.container {
+
+
+    height:100vh;
+
+
+    padding:28px 36px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:space-between;
+
+
+}
+
+
+
+
+
+h1 {
+
+
+    font-size:42px;
+
+
+    font-weight:400;
+
+
+    letter-spacing:-0.5px;
+
+
+    line-height:1.1;
+
+
+}
+
+
+
+h1 span {
+
+
+    font-weight:300;
+
+
+}
+
+
+
+
+
+.intro {
+
+
+    width:520px;
+
+
+    margin:auto;
+
+
+    text-align:center;
+
+
+    font-size:26px;
+
+
+    line-height:1.5;
+
+
+    font-weight:300;
+
+
+}
+
+
+
+
+
+
+/* 首页底部导航 */
+
+
+.container nav {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:40px;
+
+
+}
+
+
+
+.container nav a {
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.container nav a:hover {
+
+
+    opacity:0.5;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   WORKS
+===================== */
+
+
+
+.works {
+
+
+    padding:120px 36px 160px;
+
+
+}
+
+
 
 
 
 .grid {
 
+
     display:grid;
+
 
     grid-template-columns:repeat(3,1fr);
 
+
     gap:24px;
 
+
 }
+
+
+
 
 
 
 .project {
 
+
     position:relative;
+
 
     overflow:hidden;
 
+
 }
+
+
 
 
 
 .project img {
 
+
     width:100%;
+
 
     height:320px;
 
+
     object-fit:cover;
+
 
     display:block;
 
+
 }
 
+
+
+
+
+
+/* Hover */
 
 
 .overlay {
 
+
     position:absolute;
+
 
     top:0;
 
+
     left:0;
+
 
     width:100%;
 
+
     height:100%;
+
+
 
     background:rgba(0,0,0,0.55);
 
+
+
     color:white;
+
+
 
     display:flex;
 
+
     flex-direction:column;
+
 
     justify-content:center;
 
+
     align-items:center;
+
+
 
     opacity:0;
 
+
     transition:0.3s;
 
+
 }
+
+
 
 
 
 .project:hover .overlay {
 
+
     opacity:1;
 
+
 }
+
+
+
 
 
 
 .overlay h3 {
 
+
     font-size:24px;
+
 
     font-weight:400;
 
+
 }
+
 
 
 
 .overlay p {
 
+
     font-size:14px;
 
-}
 
+    margin-top:10px;
+
+
+}
