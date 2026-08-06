@@ -17,11 +17,79 @@
 <body>
 
 
+
+<!-- Fixed Header -->
+
+<header class="fixed-header">
+
+
+    <div class="header-left">
+
+
+        <a href="#works">
+            Work
+        </a>
+
+
+        <a href="#">
+            About
+        </a>
+
+
+        <a href="#">
+            Contact
+        </a>
+
+
+    </div>
+
+
+
+    <div class="header-center">
+
+        YING ZHANG ｜ 张颖
+
+    </div>
+
+
+
+    <div class="header-right">
+
+
+        <a href="#">
+            Behance
+        </a>
+
+
+        <a href="#">
+            LinkedIn
+        </a>
+
+
+        <a href="#">
+            Email
+        </a>
+
+
+    </div>
+
+
+</header>
+
+
+
+
+
+<!-- First Screen -->
+
+
 <div class="container">
 
 
     <h1>
+
         YING ZHANG <span>｜ 张颖</span>
+
     </h1>
 
 
@@ -38,11 +106,21 @@
 
     <nav>
 
-        <a href="#works">WORK</a>
 
-        <a href="#">ABOUT</a>
+        <a href="#works">
+            WORK
+        </a>
 
-        <a href="#">CONTACT</a>
+
+        <a href="#">
+            ABOUT
+        </a>
+
+
+        <a href="#">
+            CONTACT
+        </a>
+
 
     </nav>
 
@@ -53,12 +131,14 @@
 
 
 
+
+
+<!-- Works -->
+
+
 <section class="works" id="works">
 
 
-<h2>
-Selected Works
-</h2>
 
 
 
@@ -66,10 +146,13 @@ Selected Works
 
 
 
+
+
 <div class="project">
 
 
 <img src="images/project01.jpg">
+
 
 
 <div class="overlay">
@@ -94,10 +177,13 @@ Home Respiratory Detection Device
 
 
 
+
+
 <div class="project">
 
 
 <img src="images/project02.jpg">
+
 
 
 <div class="overlay">
@@ -122,10 +208,13 @@ Slope Risk Monitoring System
 
 
 
+
+
 <div class="project">
 
 
 <img src="images/project03.jpg">
+
 
 
 <div class="overlay">
@@ -148,13 +237,58 @@ Industrial Design Project
 
 
 
+
+
 </div>
+
 
 
 </section>
 
 
 
+
+
+
+
+<script>
+
+
+window.addEventListener("scroll",function(){
+
+
+
+const header=document.querySelector(".fixed-header");
+
+
+
+if(window.scrollY > window.innerHeight * 0.6){
+
+
+header.classList.add("show");
+
+
+}
+
+else{
+
+
+header.classList.remove("show");
+
+
+}
+
+
+
+});
+
+
+
+</script>
+
+
+
 </body>
+
 
 </html>
