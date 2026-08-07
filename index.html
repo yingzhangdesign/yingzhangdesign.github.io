@@ -376,14 +376,18 @@ let header = document.querySelector(".fixed-header");
 
 let hero = document.querySelector(".hero-nav");
 
+let grid = document.querySelector(".grid");
 
+
+
+/* 固定导航出现 */
 
 if(window.scrollY > 60){
 
 
-    header.classList.add("active");
+header.classList.add("active");
 
-    hero.classList.add("hidden");
+hero.classList.add("hidden");
 
 
 }
@@ -391,9 +395,24 @@ if(window.scrollY > 60){
 else{
 
 
-    header.classList.remove("active");
+header.classList.remove("active");
 
-    hero.classList.remove("hidden");
+hero.classList.remove("hidden");
+
+
+}
+
+
+
+
+
+/* 作品区域渐入 */
+
+
+if(window.scrollY > window.innerHeight * 0.45){
+
+
+grid.classList.add("show");
 
 
 }
@@ -401,7 +420,6 @@ else{
 
 
 });
-
 
 
 </script>
