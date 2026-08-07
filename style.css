@@ -321,16 +321,40 @@ padding:90px 8% 160px;
 
 
 
+/* 作品进入动画 */
+
 .grid{
 
 
 display:grid;
 
-
 grid-template-columns:repeat(3,1fr);
 
-
 gap:32px;
+
+
+opacity:0;
+
+
+transform:translateY(60px);
+
+
+transition:
+opacity .8s ease,
+transform .8s ease;
+
+
+}
+
+
+
+.grid.show{
+
+
+opacity:1;
+
+
+transform:translateY(0);
 
 
 }
@@ -373,7 +397,7 @@ cursor:pointer;
 width:100%;
 
 
-aspect-ratio:4 / 3;
+aspect-ratio:3 / 2;
 
 
 object-fit:cover;
@@ -398,7 +422,7 @@ transform .6s ease;
 .project:hover img{
 
 
-transform:scale(1.08);
+transform:scale(1.05);
 
 
 }
