@@ -1,11 +1,11 @@
 /* =====================
-   PROJECT PAGE BASIC
+PROJECT PAGE
 ===================== */
 
 
 .project-page{
 
-    max-width:900px;
+    width:100%;
 
     margin:0 auto;
 
@@ -14,6 +14,7 @@
     padding-bottom:160px;
 
 }
+
 
 
 
@@ -31,8 +32,9 @@
 
 
 
+
 /* =====================
-   PROJECT INTRO
+INTRO
 ===================== */
 
 
@@ -46,11 +48,11 @@
 
 .project-intro h1{
 
-    font-size:28px;
+    font-size:32px;
 
-    font-weight:500;
+    font-weight:400;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
@@ -58,11 +60,11 @@
 
 .project-subtitle{
 
-    font-size:14px;
+    font-size:16px;
 
-    color:#777;
+    font-weight:300;
 
-    margin-bottom:12px;
+    color:#555;
 
 }
 
@@ -72,19 +74,26 @@
 
     font-size:13px;
 
-    color:#aaa;
+    color:#999;
 
-    margin-bottom:60px;
+    margin-top:10px;
+
+    margin-bottom:80px;
 
 }
 
 
 
 
+/* HERO */
 
 .hero-image{
 
-    width:100%;
+    width:85% !important;
+
+    max-width:1400px;
+
+    margin:auto;
 
 }
 
@@ -95,15 +104,21 @@
 
 
 /* =====================
-   SECTION
+SECTION
 ===================== */
 
 
 .project-section{
 
-    margin-top:120px;
+
+    width:75%;
+
+    max-width:1200px;
+
+    margin:180px auto 0;
 
     text-align:center;
+
 
 }
 
@@ -113,11 +128,11 @@
 .project-section h2{
 
 
-    font-size:22px;
+    font-size:28px;
 
     font-weight:400;
 
-    margin-bottom:25px;
+    margin-bottom:35px;
 
 
 }
@@ -128,19 +143,19 @@
 .project-section p{
 
 
-    max-width:520px;
+    max-width:560px;
 
 
-    margin:0 auto 45px;
+    margin:0 auto 80px;
 
 
-    font-size:14px;
+    font-size:15px;
 
 
-    line-height:1.8;
+    line-height:2;
 
 
-    color:#333;
+    color:#444;
 
 
 }
@@ -152,7 +167,7 @@
 
 
 /* =====================
-   IMAGE LAYOUT
+IMAGE GRID
 ===================== */
 
 
@@ -162,11 +177,7 @@
 
     display:grid;
 
-
-    gap:24px;
-
-
-    align-items:center;
+    gap:30px;
 
 
 }
@@ -197,13 +208,29 @@
 
 
 
+.image-grid img{
 
+
+    width:100%;
+
+
+}
+
+
+
+
+
+
+/* INTERIOR LARGE IMAGE */
 
 
 .large-image{
 
 
-    width:100%;
+    width:90% !important;
+
+    margin:auto;
+
 
 }
 
@@ -213,6 +240,7 @@
 
 
 
+/* VR */
 
 .image-column{
 
@@ -221,7 +249,7 @@
 
     flex-direction:column;
 
-    gap:40px;
+    gap:100px;
 
 
 }
@@ -233,7 +261,9 @@
 .image-column img{
 
 
-    width:100%;
+    width:85%;
+
+    margin:auto;
 
 
 }
@@ -243,21 +273,20 @@
 
 
 
-/* =====================
-   SOURCE NOTE
-===================== */
+
+/* SOURCE */
 
 
 .source{
 
 
-    margin-top:20px!important;
+    margin-top:25px!important;
 
 
-    font-size:11px!important;
+    font-size:12px!important;
 
 
-    color:#aaa!important;
+    color:#999!important;
 
 
 }
@@ -269,9 +298,7 @@
 
 
 
-/* =====================
-   FOOTER
-===================== */
+/* FOOTER */
 
 
 .project-footer{
@@ -279,11 +306,10 @@
 
     text-align:center;
 
+    margin-top:220px;
 
-    margin-top:160px;
 
-
-    font-size:14px;
+    font-size:16px;
 
 
     line-height:2;
@@ -300,45 +326,30 @@
 
 
 
-
-/* =====================
-   MOBILE
-===================== */
-
-
 @media(max-width:900px){
 
 
+.project-section{
 
-.project-page{
-
-
-    width:auto;
-
-    padding:100px 25px;
-
+    width:90%;
 
 }
 
 
-
-.image-grid.three{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
+.image-grid.three,
 .image-grid.two{
 
-
     grid-template-columns:1fr;
 
+}
+
+
+.hero-image{
+
+    width:95%!important;
 
 }
+
 
 
 }
