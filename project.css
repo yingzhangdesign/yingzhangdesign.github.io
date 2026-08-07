@@ -48,37 +48,44 @@ INTRO
 
 .project-intro h1{
 
-    font-size:32px;
-
+    font-size:48px;
     font-weight:400;
-
-    margin-bottom:18px;
+    letter-spacing:-1px;
+    margin-bottom:35px;
 
 }
-
 
 
 .project-subtitle{
 
-    font-size:16px;
-
+    font-size:20px;
     font-weight:300;
-
     color:#555;
+    margin-bottom:25px;
 
 }
 
 
+.project-description{
+
+    max-width:500px;
+    margin:0 auto;
+
+    font-size:14px;
+    line-height:1.8;
+
+    color:#777;
+
+}
+
 
 .project-date{
 
+    margin-top:35px;
+
     font-size:13px;
 
-    color:#999;
-
-    margin-top:10px;
-
-    margin-bottom:80px;
+    color:#aaa;
 
 }
 
