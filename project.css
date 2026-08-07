@@ -1,111 +1,90 @@
 /* =====================
-PROJECT PAGE
+   PROJECT PAGE BASIC
 ===================== */
 
 
 .project-page{
 
-padding-top:120px;
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding-top:120px;
+
+    padding-bottom:160px;
 
 }
 
 
 
-.project-hero{
+.project-page img{
 
-text-align:center;
+    display:block;
 
-}
+    width:100%;
 
-
-
-.project-hero h1{
-
-font-size:42px;
-
-font-weight:400;
-
-margin-bottom:15px;
-
-}
-
-
-
-.subtitle{
-
-font-size:18px;
-
-font-weight:300;
-
-margin-bottom:70px;
-
-}
-
-
-
-.project-hero img{
-
-
-width:70%;
-
-max-width:1100px;
-
-display:block;
-
-margin:auto;
-
+    height:auto;
 
 }
 
 
 
 
-/* INFO */
+
+/* =====================
+   PROJECT INTRO
+===================== */
 
 
-.project-info{
+.project-intro{
 
-
-width:60%;
-
-margin:100px auto;
-
-display:flex;
-
-justify-content:center;
-
-gap:120px;
-
-text-align:center;
-
+    text-align:center;
 
 }
 
 
 
-.project-info h2{
+.project-intro h1{
 
+    font-size:28px;
 
-font-size:16px;
+    font-weight:500;
 
-font-weight:400;
-
-margin-bottom:15px;
-
+    margin-bottom:20px;
 
 }
 
 
 
-.project-info p{
+.project-subtitle{
+
+    font-size:14px;
+
+    color:#777;
+
+    margin-bottom:12px;
+
+}
 
 
-font-size:15px;
 
-font-weight:300;
+.project-date{
 
-line-height:1.6;
+    font-size:13px;
 
+    color:#aaa;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+
+.hero-image{
+
+    width:100%;
 
 }
 
@@ -114,31 +93,31 @@ line-height:1.6;
 
 
 
-/* SECTION */
+
+/* =====================
+   SECTION
+===================== */
 
 
 .project-section{
 
+    margin-top:120px;
 
-width:70%;
-
-margin:160px auto;
-
-text-align:center;
-
+    text-align:center;
 
 }
+
 
 
 
 .project-section h2{
 
 
-font-size:30px;
+    font-size:22px;
 
-font-weight:400;
+    font-weight:400;
 
-margin-bottom:30px;
+    margin-bottom:25px;
 
 
 }
@@ -149,31 +128,19 @@ margin-bottom:30px;
 .project-section p{
 
 
-width:500px;
-
-margin:auto;
-
-font-size:16px;
-
-line-height:1.8;
-
-font-weight:300;
-
-margin-bottom:70px;
+    max-width:520px;
 
 
-}
+    margin:0 auto 45px;
 
 
+    font-size:14px;
 
-.project-section img{
+
+    line-height:1.8;
 
 
-width:100%;
-
-display:block;
-
-margin:auto;
+    color:#333;
 
 
 }
@@ -183,22 +150,78 @@ margin:auto;
 
 
 
-.image-row{
+
+/* =====================
+   IMAGE LAYOUT
+===================== */
 
 
-display:flex;
 
-gap:30px;
+.image-grid{
+
+
+    display:grid;
+
+
+    gap:24px;
+
+
+    align-items:center;
 
 
 }
 
 
 
-.image-row img{
 
 
-width:50%;
+.image-grid.three{
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+}
+
+
+
+
+.image-grid.two{
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+
+
+
+
+.large-image{
+
+
+    width:100%;
+
+}
+
+
+
+
+
+
+
+
+.image-column{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
 
 
 }
@@ -210,7 +233,7 @@ width:50%;
 .image-column img{
 
 
-margin-bottom:80px;
+    width:100%;
 
 
 }
@@ -220,16 +243,102 @@ margin-bottom:80px;
 
 
 
-footer{
+/* =====================
+   SOURCE NOTE
+===================== */
 
 
-text-align:center;
+.source{
 
-font-size:20px;
 
-font-weight:300;
+    margin-top:20px!important;
 
-padding:150px 0;
+
+    font-size:11px!important;
+
+
+    color:#aaa!important;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+   FOOTER
+===================== */
+
+
+.project-footer{
+
+
+    text-align:center;
+
+
+    margin-top:160px;
+
+
+    font-size:14px;
+
+
+    line-height:2;
+
+
+    color:#777;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+   MOBILE
+===================== */
+
+
+@media(max-width:900px){
+
+
+
+.project-page{
+
+
+    width:auto;
+
+    padding:100px 25px;
+
+
+}
+
+
+
+.image-grid.three{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.image-grid.two{
+
+
+    grid-template-columns:1fr;
+
+
+}
 
 
 }
