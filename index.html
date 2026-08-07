@@ -369,20 +369,21 @@ Industrial Design Project
 <script>
 
 
+/* =====================
+   FIXED HEADER
+===================== */
+
+
 window.addEventListener("scroll",()=>{
 
 
-let header = document.querySelector(".fixed-header");
+const header = document.querySelector(".fixed-header");
 
-let hero = document.querySelector(".hero-nav");
-
-let grid = document.querySelector(".grid");
+const hero = document.querySelector(".hero-nav");
 
 
 
-/* 固定导航出现 */
-
-if(window.scrollY > 60){
+if(window.scrollY > 80){
 
 
 header.classList.add("active");
@@ -403,13 +404,28 @@ hero.classList.remove("hidden");
 }
 
 
+});
 
 
 
-/* 作品区域渐入 */
 
 
-if(window.scrollY > window.innerHeight * 0.45){
+/* =====================
+   WORKS FADE IN
+===================== */
+
+
+const grid = document.querySelector(".grid");
+
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
 
 
 grid.classList.add("show");
@@ -418,8 +434,21 @@ grid.classList.add("show");
 }
 
 
+});
+
+
+},{
+
+
+threshold:0.15
+
 
 });
+
+
+
+observer.observe(grid);
+
 
 
 </script>
